@@ -1,6 +1,6 @@
 # Fast Github
 
-一个基于 Cloudflare Worker 的 GitHub 加速镜像站，支持代理访问 GitHub 仓库页面、raw 文件、图片等所有资源。[conversation_history:1]
+一个基于 Cloudflare Worker 的 GitHub 加速镜像站，支持代理访问 GitHub 仓库页面、raw 文件、图片等所有资源。
 
 ---
 
@@ -9,7 +9,7 @@
 - 站点地址：`https://sanzhong.xyz`
 - 示例访问：
   - `https://sanzhong.xyz/ZhangShengFan/FastGithub`
-  - `https://sanzhong.xyz/torvalds/linux`[attached_file:1]
+  - `https://sanzhong.xyz/torvalds/linux`
 
 ---
 
@@ -21,12 +21,12 @@
 
 ### 方式一：Cloudflare Workers Dashboard
 
-1. 登录 Cloudflare 控制台：<https://dash.cloudflare.com/>
+1. 登录 Cloudflare 控制台：https://dash.cloudflare.com/
 2. 进入 **Workers & Pages**
 3. 点击 **Create Application** → **Create Worker**
 4. 复制 `worker.js` 到编辑器
 5. 点击 **Save and Deploy**
-6. 绑定自定义域名（**必须**：`workers.dev` 已被阻断，必须绑定自定义域名）[conversation_history:1]
+6. 绑定自定义域名（**必须**：`workers.dev` 已被阻断，必须绑定自定义域名）
 
 ### 方式二：Wrangler CLI
 
@@ -55,7 +55,7 @@ text
 2. 点击 **Triggers** 标签
 3. 在 **Custom Domains** 部分点击 **Add Custom Domain**
 4. 输入你的域名（如 `sanzhong.xyz`）
-5. 等待 DNS 配置生效[conversation_history:1]
+5. 等待 DNS 配置生效
 
 ---
 
@@ -68,7 +68,7 @@ text
    - 用户名：`torvalds`
    - 仓库：`torvalds/linux`
    - 完整链接：`https://github.com/torvalds/linux`
-3. 点击「打开」按钮[attached_file:1]
+3. 点击「打开」按钮
 
 ### 方法二：直接访问
 
@@ -98,23 +98,13 @@ text
 - 🚫 请遵守 GitHub 服务条款，不要滥用
 - 🔄 建议添加访问频率限制，避免对 GitHub 造成压力
 - 💡 公开部署建议配置 Cloudflare 防火墙规则
-- 🌐 必须绑定自定义域名，`workers.dev` 域名在部分地区已被阻断[conversation_history:1]
-
----
-
-## 🤝 贡献
-
-欢迎提交 Issue 和 Pull Request！
-
-- 🐛 发现 Bug？提交 Issue
-- 💡 有新想法？提交 Feature Request
-- 🔧 想改进代码？提交 Pull Request[conversation_history:1]
+- 🌐 必须绑定自定义域名，`workers.dev` 域名在部分地区已被阻断
 
 ---
 
 ## 📄 开源协议
 
-本项目采用 [MIT License](LICENSE) 开源协议。[conversation_history:1]
+本项目采用 [MIT License](LICENSE) 开源协议。
 
 ---
 
@@ -122,8 +112,8 @@ text
 
 如果这个项目对你有帮助，请给个 Star ⭐ 支持一下！
 
-[![Star History Chart](https://api.star-history.com/svg?repos=ZhangShengFan/FastGithub&type=Date)](https://star-history.com/#ZhangShengFan/FastGithub&Date)[conversation_history:1]
+[![Star History Chart](https://api.star-history.com/svg?repos=ZhangShengFan/FastGithub&type=Date)](https://star-history.com/#ZhangShengFan/FastGithub&Date)
 
 ---
 
-**Made with ❤️ by [ZhangShengFan](https://github.com/ZhangShengFan)**[conversation_history:1]
+**Made with ❤️ by [ZhangShengFan](https://github.com/ZhangShengFan)**
