@@ -65,9 +65,9 @@ text
 
 1. 访问镜像站首页：`https://sanzhong.xyz`
 2. 在输入框输入以下任一格式：
-   - 用户名：`torvalds`
-   - 仓库：`torvalds/linux`
-   - 完整链接：`https://github.com/torvalds/linux`
+   - 用户名：`ZhangShengFan`
+   - 仓库：`FastGithub`
+   - 完整链接：`https://github.com/ZhangShengFan/FastGithub`
 3. 点击「打开」按钮
 
 ### 方法二：直接访问
@@ -76,44 +76,25 @@ text
 
 https://sanzhong.xyz/用户名/仓库名
 
-text
 
 例如：
 
 https://sanzhong.xyz/ZhangShengFan/FastGithub
 
-text
 
 ### 方法三：URL 参数
 
 https://sanzhong.xyz/proxy?url=https://github.com/torvalds/linux
 
-text
 
 ---
 
-## ⚠️ 注意事项
+## 注意事项
 
 - ⚖️ 本项目仅供学习交流使用，请勿用于违法用途
-- 🚫 请遵守 GitHub 服务条款，不要滥用
-- 🔄 建议添加访问频率限制，避免对 GitHub 造成压力
-- 💡 公开部署建议配置 Cloudflare 防火墙规则
 - 🌐 必须绑定自定义域名，`workers.dev` 域名在部分地区已被阻断
 
 ---
 
-## 📄 开源协议
-
-本项目采用 [MIT License](LICENSE) 开源协议。
-
----
-
-## ⭐ Star History
-
-如果这个项目对你有帮助，请给个 Star ⭐ 支持一下！
-
-[![Star History Chart](https://api.star-history.com/svg?repos=ZhangShengFan/FastGithub&type=Date)](https://star-history.com/#ZhangShengFan/FastGithub&Date)
-
----
 
 **Made with ❤️ by [ZhangShengFan](https://github.com/ZhangShengFan)**
