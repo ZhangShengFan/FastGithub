@@ -25,31 +25,12 @@
 
 ## 🚀 快速部署
 
-### 方式一：Cloudflare Workers Dashboard
-
 1. 登录 Cloudflare 控制台：https://dash.cloudflare.com/
 2. 进入 **Workers & Pages**
 3. 点击 **Create Application** → **Create Worker**
 4. 复制 `worker.js` 到编辑器
 5. 点击 **Save and Deploy**
 6. 绑定自定义域名（**必须**：`workers.dev` 已被阻断，必须绑定自定义域名）
-
-### 方式二：Wrangler CLI
-
-安装 Wrangler
-npm install -g wrangler
-
-登录
-wrangler login
-
-创建项目
-wrangler init github-mirror
-
-复制代码到 src/index.js
-部署
-wrangler deploy
-
-text
 
 ---
 
@@ -62,7 +43,6 @@ text
 3. 在 **Custom Domains** 部分点击 **Add Custom Domain**
 4. 输入你的域名（如 `sanzhong.xyz`）
 5. 等待 DNS 配置生效
-
 ---
 
 ## 📖 使用方法
