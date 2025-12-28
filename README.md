@@ -1,7 +1,6 @@
-
 # Fast Github
 
-一个基于 Cloudflare Worker 的 GitHub 加速镜像站，支持代理访问 GitHub 仓库页面、raw 文件、图片等所有资源。
+一个基于 Cloudflare Worker 的 GitHub 加速镜像站，支持代理访问 GitHub 仓库页面、raw 文件、图片等所有资源。[conversation_history:1]
 
 ---
 
@@ -10,7 +9,7 @@
 - 站点地址：`https://sanzhong.xyz`
 - 示例访问：
   - `https://sanzhong.xyz/ZhangShengFan/FastGithub`
-  - `https://sanzhong.xyz/torvalds/linux`
+  - `https://sanzhong.xyz/torvalds/linux`[attached_file:1]
 
 ---
 
@@ -22,12 +21,12 @@
 
 ### 方式一：Cloudflare Workers Dashboard
 
-1. 登录 [Cloudflare Dashboard](https://dash.cloudflare.com/)
+1. 登录 Cloudflare 控制台：<https://dash.cloudflare.com/>
 2. 进入 **Workers & Pages**
 3. 点击 **Create Application** → **Create Worker**
 4. 复制 `worker.js` 到编辑器
 5. 点击 **Save and Deploy**
-6. 绑定自定义域名（**必须**：`workers.dev` 已被阻断，必须绑定自定义域名）
+6. 绑定自定义域名（**必须**：`workers.dev` 已被阻断，必须绑定自定义域名）[conversation_history:1]
 
 ### 方式二：Wrangler CLI
 
@@ -56,7 +55,7 @@ text
 2. 点击 **Triggers** 标签
 3. 在 **Custom Domains** 部分点击 **Add Custom Domain**
 4. 输入你的域名（如 `sanzhong.xyz`）
-5. 等待 DNS 配置生效
+5. 等待 DNS 配置生效[conversation_history:1]
 
 ---
 
@@ -69,7 +68,7 @@ text
    - 用户名：`torvalds`
    - 仓库：`torvalds/linux`
    - 完整链接：`https://github.com/torvalds/linux`
-3. 点击「打开」按钮
+3. 点击「打开」按钮[attached_file:1]
 
 ### 方法二：直接访问
 
@@ -80,6 +79,7 @@ https://sanzhong.xyz/用户名/仓库名
 text
 
 例如：
+
 https://sanzhong.xyz/ZhangShengFan/FastGithub
 
 text
@@ -92,41 +92,13 @@ text
 
 ---
 
-## ✨ 功能特性
-
-- 🚀 支持代理所有 GitHub 相关域名（github.com、raw.githubusercontent.com、avatars 等）
-- 📝 支持三种输入方式：`user`、`user/repo`、完整 GitHub URL
-- 🎨 精美的深色/浅色主题，1.5秒平滑切换动画
-- 💾 自动记忆用户主题偏好
-- 🔒 移除 CSP 限制，确保页面完整显示
-- ⚡ 无服务器架构，部署简单，响应迅速
-- 🖼️ 完整代理图片、头像、CSS、JS 等所有资源
-
----
-
-## 📋 支持的域名
-
-项目自动代理以下 GitHub 相关域名：
-
-- `github.com`
-- `api.github.com`
-- `raw.githubusercontent.com`
-- `avatars.githubusercontent.com`
-- `camo.githubusercontent.com`
-- `github.githubassets.com`
-- `private-user-images.githubusercontent.com`
-- `githubusercontent.com`
-- GitHub S3 存储桶等
-
----
-
 ## ⚠️ 注意事项
 
 - ⚖️ 本项目仅供学习交流使用，请勿用于违法用途
 - 🚫 请遵守 GitHub 服务条款，不要滥用
 - 🔄 建议添加访问频率限制，避免对 GitHub 造成压力
 - 💡 公开部署建议配置 Cloudflare 防火墙规则
-- 🌐 必须绑定自定义域名，`workers.dev` 域名在部分地区已被阻断
+- 🌐 必须绑定自定义域名，`workers.dev` 域名在部分地区已被阻断[conversation_history:1]
 
 ---
 
@@ -136,20 +108,13 @@ text
 
 - 🐛 发现 Bug？提交 Issue
 - 💡 有新想法？提交 Feature Request
-- 🔧 想改进代码？提交 Pull Request
+- 🔧 想改进代码？提交 Pull Request[conversation_history:1]
 
 ---
 
 ## 📄 开源协议
 
-本项目采用 [MIT License](LICENSE) 开源协议。
-
----
-
-## 🙏 致谢
-
-- 感谢 Cloudflare 提供的免费 Workers 服务
-- 感谢所有为本项目做出贡献的开发者
+本项目采用 [MIT License](LICENSE) 开源协议。[conversation_history:1]
 
 ---
 
@@ -157,8 +122,8 @@ text
 
 如果这个项目对你有帮助，请给个 Star ⭐ 支持一下！
 
-[![Star History Chart](https://api.star-history.com/svg?repos=ZhangShengFan/FastGithub&type=Date)](https://star-history.com/#ZhangShengFan/FastGithub&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=ZhangShengFan/FastGithub&type=Date)](https://star-history.com/#ZhangShengFan/FastGithub&Date)[conversation_history:1]
 
 ---
 
-**Made with ❤️ by [ZhangShengFan](https://github.com/ZhangShengFan)**
+**Made with ❤️ by [ZhangShengFan](https://github.com/ZhangShengFan)**[conversation_history:1]
