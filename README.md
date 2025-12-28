@@ -14,6 +14,12 @@
 ---
 
 ## 📸 截图
+<img width="1920" height="1080" alt="5p9oKJgLDp" src="https://github.com/user-attachments/assets/6946054e-1c43-4f71-a5c0-202bda2ad882" />
+
+<img width="1920" height="1080" alt="chrome_8aRYsVnH2Q" src="https://github.com/user-attachments/assets/cf672037-f367-4111-a00a-fc46b50c0963" />
+
+<img width="1920" height="1080" alt="chrome_b0LIlWRyU3" src="https://github.com/user-attachments/assets/e26ce3bc-12ee-4871-88c5-d1ca8a64e2a5" />
+
 
 ---
 
