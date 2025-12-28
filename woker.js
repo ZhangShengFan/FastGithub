@@ -342,17 +342,17 @@ function renderHomePage() {
       </div>
       
       <p class="subtitle">
-        粘贴任何 GitHub 链接，或直接输入 <code>user</code> / <code>user/repo</code>，自动通过当前站点中转访问。
+        粘贴 GitHub 链接，或直接输入 User / User/Repo
       </p>
 
       <div class="input-group">
         <div class="input-wrapper">
-          <span class="input-prefix">github.com/</span>
+          <span class="input-prefix">Github.com/</span>
           <input
             id="gh-input"
             type="text"
             autocomplete="off"
-            placeholder="user / user/repo / 完整 GitHub URL"
+            placeholder="User / User/Repo / 完整 GitHub URL"
           />
         </div>
         <button class="primary" id="gh-open">
@@ -364,12 +364,12 @@ function renderHomePage() {
       <div class="error" id="gh-error"></div>
 
       <div class="hint-row">
-        <span>支持 <strong>完整 URL</strong> 或 <strong>user[/repo]</strong> 格式</span>
+        <span>支持 完整 URL 或 User[/Repo] 格式</span>
       </div>
 
       <div class="footnote">
-        <span>支持所有 GitHub 相关域名代理，请勿用于违法用途。</span>
-        <span>Worker 自用镜像 · UI 可以自行修改</span>
+        <span>支持 GitHub 相关域名代理，请勿用于违法用途。</span>
+        <span>By ZSFan</span>
       </div>
     </div>
   </main>
