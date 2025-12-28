@@ -8,28 +8,11 @@
 
 - 站点地址：`https://sanzhong.xyz`
 - 示例访问：
-  - `https://your-domain.com/torvalds/linux`
-  - `https://your-domain.com/Zsfan1224/IMG`
+  - `https://sanzhong.xyz/ZhangShengFan/FastGithub/`
 
 ---
 
 ## 📸 截图
-
-### 首页界面 - 浅色模式
-
-![首页浅色模式](screenshots/light-mode.png)
-
-### 首页界面 - 深色模式
-
-![首页深色模式](screenshots/dark-mode.png)
-
-### 仓库页面示例
-
-![仓库页面](screenshots/repo-page.png)
-
-### 图片正常加载
-
-![图片加载](screenshots/images-loaded.png)
 
 ---
 
