@@ -1,6 +1,6 @@
 # Fast Github
 
-一个基于 Cloudflare Worker 的 GitHub 加速镜像站，支持代理访问 GitHub 仓库页面、raw 文件、图片等所有资源。
+一个基于 Cloudflare Worker 的 GitHub 加速镜像站，支持代理访问 GitHub 仓库页面、Raw 文件、图片等所有资源。
 
 ---
 
