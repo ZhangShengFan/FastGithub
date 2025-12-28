@@ -10,12 +10,9 @@ export default {
       return handleProxy(request);
     }
 
-    // 其余路径全部按路径代理到 GitHub
     return handlePathProxy(request);
   },
 };
-
-/* ---------- UI 页面 ---------- */
 
 function renderHomePage() {
   const html = `<!doctype html>
@@ -457,8 +454,6 @@ function renderHomePage() {
   });
 }
 
-/* ---------- /proxy?url=... ---------- */
-
 async function handleProxy(request) {
   const url = new URL(request.url);
   const target = url.searchParams.get('url');
@@ -477,8 +472,6 @@ async function handleProxy(request) {
   return fetchThroughGithub(request, targetUrl);
 }
 
-/* ---------- 路径代理（完整修复版）---------- */
-
 async function handlePathProxy(request) {
   const url = new URL(request.url);
   const pathname = url.pathname;
@@ -487,23 +480,18 @@ async function handlePathProxy(request) {
   let targetHost = 'github.com';
   let targetPath = pathname;
 
-  // 优先匹配头像路径：/u/数字
   if (pathname.match(/^\/u\/\d+/)) {
     targetHost = 'avatars.githubusercontent.com';
   }
-  // GitHub Assets（_next、assets 等）
   else if (pathname.startsWith('/_next/') || pathname.startsWith('/assets/')) {
     targetHost = 'github.githubassets.com';
   }
-  // Camo 图片
   else if (pathname.startsWith('/camo/')) {
     targetHost = 'camo.githubusercontent.com';
   }
-  // 用户附件
   else if (pathname.startsWith('/user-attachments/')) {
     targetHost = 'private-user-images.githubusercontent.com';
   }
-  // raw 文件
   else if (pathname.includes('/raw/')) {
     const rawMatch = pathname.match(/^\/([^/]+)\/([^/]+)\/raw\/(.+)$/);
     if (rawMatch) {
@@ -515,8 +503,6 @@ async function handlePathProxy(request) {
   const target = new URL('https://' + targetHost + targetPath + search);
   return fetchThroughGithub(request, target);
 }
-
-/* ---------- 核心代理逻辑（完整修复版，支持内容重写）---------- */
 
 async function fetchThroughGithub(request, targetUrl) {
   const allowedHosts = new Set([
@@ -586,7 +572,6 @@ async function fetchThroughGithub(request, targetUrl) {
     
     const contentType = respHeaders.get('content-type') || '';
     
-    // 需要重写内容的类型：HTML、JavaScript、JSON
     const shouldRewrite = contentType.includes('text/html') || 
                           contentType.includes('application/javascript') ||
                           contentType.includes('text/javascript') ||
@@ -597,43 +582,34 @@ async function fetchThroughGithub(request, targetUrl) {
       
       const currentOrigin = new URL(request.url).origin;
       
-      // 按顺序替换所有 GitHub 域名，从具体到通用
-      
-      // 1. raw.githubusercontent.com -> 当前域名
       content = content.replace(/https:\/\/raw\.githubusercontent\.com/g, currentOrigin);
       content = content.replace(/http:\/\/raw\.githubusercontent\.com/g, currentOrigin);
       content = content.replace(/"https:\/\/raw\.githubusercontent\.com/g, `"${currentOrigin}`);
       content = content.replace(/'https:\/\/raw\.githubusercontent\.com/g, `'${currentOrigin}`);
       
-      // 2. github.githubassets.com -> 当前域名
       content = content.replace(/https:\/\/github\.githubassets\.com/g, currentOrigin);
       content = content.replace(/http:\/\/github\.githubassets\.com/g, currentOrigin);
       content = content.replace(/"https:\/\/github\.githubassets\.com/g, `"${currentOrigin}`);
       content = content.replace(/'https:\/\/github\.githubassets\.com/g, `'${currentOrigin}`);
       
-      // 3. avatars.githubusercontent.com -> 当前域名（保持 /u/ 路径）
       content = content.replace(/https:\/\/avatars\.githubusercontent\.com/g, currentOrigin);
       content = content.replace(/http:\/\/avatars\.githubusercontent\.com/g, currentOrigin);
       content = content.replace(/"https:\/\/avatars\.githubusercontent\.com/g, `"${currentOrigin}`);
       content = content.replace(/'https:\/\/avatars\.githubusercontent\.com/g, `'${currentOrigin}`);
       
-      // 4. camo.githubusercontent.com -> 当前域名
       content = content.replace(/https:\/\/camo\.githubusercontent\.com/g, currentOrigin);
       content = content.replace(/http:\/\/camo\.githubusercontent\.com/g, currentOrigin);
       content = content.replace(/"https:\/\/camo\.githubusercontent\.com/g, `"${currentOrigin}`);
       content = content.replace(/'https:\/\/camo\.githubusercontent\.com/g, `'${currentOrigin}`);
       
-      // 5. private-user-images.githubusercontent.com -> 当前域名
       content = content.replace(/https:\/\/private-user-images\.githubusercontent\.com/g, currentOrigin);
       content = content.replace(/http:\/\/private-user-images\.githubusercontent\.com/g, currentOrigin);
       
-      // 6. github.com -> 当前域名（最后替换）
       content = content.replace(/https:\/\/github\.com/g, currentOrigin);
       content = content.replace(/http:\/\/github\.com/g, currentOrigin);
       content = content.replace(/"https:\/\/github\.com/g, `"${currentOrigin}`);
       content = content.replace(/'https:\/\/github\.com/g, `'${currentOrigin}`);
       
-      // 7. 处理相对协议的链接（//开头）
       const currentHost = new URL(request.url).host;
       content = content.replace(/\/\/raw\.githubusercontent\.com/g, `//${currentHost}`);
       content = content.replace(/\/\/github\.githubassets\.com/g, `//${currentHost}`);
