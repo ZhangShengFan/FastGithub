@@ -39,10 +39,8 @@
 ### 绑定自定义域名
 
 1. 进入你的 Worker 设置页面
-2. 点击 **Triggers** 标签
-3. 在 **Custom Domains** 部分点击 **Add Custom Domain**
-4. 输入你的域名（如 `sanzhong.xyz`）
-5. 等待 DNS 配置生效
+2. 配置自定义域名
+3. 等待 DNS 配置生效（一把立马就能访问了）
 ---
 
 ## 📖 使用方法
